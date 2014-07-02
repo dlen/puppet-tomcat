@@ -42,14 +42,14 @@
         <!--
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
         -->
-
+        <!-- Uses the proxy client IP instead of the proxy own IP for the log -->
+        <Valve className="org.apache.catalina.valves.RemoteIpValve" />
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html -->
         <!--
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log." suffix=".txt" pattern="common" resolveHosts="false"/>
         -->
-
       </Host>
     </Engine>
   </Service>
